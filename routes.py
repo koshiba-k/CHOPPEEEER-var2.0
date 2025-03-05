@@ -1,5 +1,4 @@
 # routes.py
-import json, re, pytz
 from datetime import datetime, timedelta
 from flask import render_template, request, redirect, url_for, flash, jsonify, session
 from flask_login import login_user, logout_user, login_required, current_user
@@ -12,7 +11,7 @@ from app import app, db, login_manager
 from models import User, HealthRecord ,Department, Announcement
 from forms import LoginForm, AddEmployeeForm, EmployeeForm
 
-
+import json, re, pytz
 
 # 日本語部門名取得関数を定義
 def get_japanese_department_name(department_abbreviation):
