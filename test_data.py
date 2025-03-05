@@ -71,7 +71,7 @@ def create_test_data():
             
             # 健康記録の登録(30日分のデータを生成)
             for day in range(30):
-                record_date = datetime.now(tz) - timedelta(days=day + 1)  # タイムゾーンを考慮して日付を生成
+                record_date = datetime.now(tz) - timedelta(days=day)  # タイムゾーンを考慮して日付を生成
                 Healthflag=0
                 if day % 70 == 0 and 1 == random.randint(1, 10):
                     temperature = round(random.uniform(37.0, 38.5), 1)
