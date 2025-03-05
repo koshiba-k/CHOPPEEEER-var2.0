@@ -57,7 +57,6 @@ def login():
             flash("無効な社員番号またはパスワードです。", "danger")
     return render_template("login_form.html", form=form)
 
-
 # ログアウトのルート
 @app.route("/logout")
 @login_required

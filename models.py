@@ -57,4 +57,4 @@ class Announcement(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String(100), nullable=False)
     content = db.Column(db.Text, nullable=False)
-    date = db.Column(db.DateTime, default=lambda: datetime.now(timezone('Asia/Tokyo')))  # 日本の標準時間でのデフォルト値
+    date = db.Column(db.DateTime, default=lambda: datetime.now(timezone('Asia/Tokyo')))

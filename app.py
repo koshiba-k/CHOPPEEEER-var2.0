@@ -21,4 +21,3 @@ from routes import *
 if __name__ == '__main__':
     debug = False
     app.run(host='0.0.0.0', port=8080, debug=debug)
-

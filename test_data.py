@@ -5,7 +5,8 @@ from models import User, HealthRecord, Department, Announcement
 from datetime import datetime, timedelta
 from werkzeug.security import generate_password_hash
 
-import pytz 
+import pytz
+
 # テストデータの生成
 departments = ['hr', 'it', 'sales', 'marketing', 'finance']
 names = [

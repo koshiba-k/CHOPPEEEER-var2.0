@@ -28,7 +28,6 @@ class LoginForm(FlaskForm):
     )
     submit = SubmitField('ログイン')
 
-
 # 社員登録フォーム
 class AddEmployeeForm(FlaskForm):
     employee_number = StringField(

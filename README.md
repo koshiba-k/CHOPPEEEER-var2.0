@@ -76,4 +76,3 @@ CHOPPEEEERは、社員の体調管理をサポートするWebアプリケーシ�
 
 ## ライセンス  
 このプロジェクトは、**GNU General Public License v3.0** のもとで公開されています。  
-
