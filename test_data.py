@@ -49,7 +49,12 @@ def create_test_data():
             phone = f"090-{random.randint(1000, 9999)}-{random.randint(1000, 9999)}"
             email = f"{name.replace(' ', '_').lower()}@example.com"
             password = generate_password_hash("password123")
-            is_admin = True 
+            
+            # 管理者権限の設定(IDが20未満の社員は管理者権限を持つ)
+            if i <= 20:
+                is_admin = True 
+            else:
+                is_admin = False
             
             user = User(
                 password_hash=password,
@@ -63,8 +68,9 @@ def create_test_data():
             
             db.session.add(user)
             db.session.commit()
-
-            for day in range(90):
+            
+            # 健康記録の登録(30日分のデータを生成)
+            for day in range(30):
                 record_date = datetime.now(tz) - timedelta(days=day + 1)  # タイムゾーンを考慮して日付を生成
                 Healthflag=0
                 if day % 70 == 0 and 1 == random.randint(1, 10):
